@@ -1,0 +1,14 @@
+<%= form_with url: entry_path, method: :post do |form| %>
+  <div class="form-group">
+    <%= form.label :ticket_number, "Номер билета" %>
+    <%= form.text_field :ticket_number, class: 'form-control' %>
+  </div>
+
+  <%= form.submit "Проверить билет", class: 'btn btn-primary' %>
+<% end %>
+
+<% if flash[:answer] %>
+  <div>
+    <p><%= flash[:answer] %></p>
+  </div>
+<% end %>
