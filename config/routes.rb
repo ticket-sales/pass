@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "entry#entry"
-  get '/entry' => 'entry#entry'
-  post '/entry' => 'entry#check'
+  root "terminal#terminal"
+  get '/terminal' => 'terminal#terminal'
+  post '/terminal/entry' => 'terminal#entry'
+  post '/terminal/exit' => 'terminal#exit'
 end
